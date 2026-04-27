@@ -23,19 +23,18 @@ public class HotelRepositoryCustomImpl implements HotelRepositoryCustom {
         var cb = entityManager.getCriteriaBuilder();
         var query = cb.createQuery(Hotel.class);
         var hotel = query.from(Hotel.class);
-        var predicates = new ArrayList<>();
-
+        var predicates = new ArrayList<Predicate>();
         if (name != null && !name.isBlank()) {
             predicates.add(cb.like(cb.lower(hotel.get("name")), "%" + name.toLowerCase() + "%"));
         }
         if (brand != null && !brand.isBlank()) {
-            predicates.add(cb.equal(hotel.get("brand"), brand));
+            predicates.add(cb.equal(cb.lower(hotel.get("brand")), brand.toLowerCase()));
         }
         if (city != null && !city.isBlank()) {
-            predicates.add(cb.equal(hotel.get("address").get("city"), city));
+            predicates.add(cb.equal(cb.lower(hotel.get("address").get("city")), city.toLowerCase()));
         }
         if (country != null && !country.isBlank()) {
-            predicates.add(cb.equal(hotel.get("address").get("country"), country));
+            predicates.add(cb.equal(cb.lower(hotel.get("address").get("country")), country.toLowerCase()));
         }
         if (amenities != null && !amenities.isEmpty()) {
             for (String amenity : amenities) {
