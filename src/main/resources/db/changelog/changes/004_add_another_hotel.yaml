@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004
+      author: Anton_Kaliadau
+      changes:
+        - insert:
+            tableName: hotel
+            columns:
+              - column:
+                  name: name
+                  value: "TripleTree by Vasia Minsk"
+              - column:
+                  name: description
+                  value: "The TripleTree by Vasia Hotel Minsk offers 193 luxurious rooms in the Belorussian capital and stunning views of Minsk city from the hotel's 20th floor ..."
+              - column:
+                  name: brand
+                  value: "Vasia"
+              - column:
+                  name: house_number
+                  value: '11'
+              - column:
+                  name: street
+                  value: "Pushkinski Avenue"
+              - column:
+                  name: city
+                  value: "Mahiliou"
+              - column:
+                  name: country
+                  value: "Belarus"
+              - column:
+                  name: postal_code
+                  value: "212000"
+              - column:
+                  name: phone
+                  value: "+375 29 309-80-00"
+              - column:
+                  name: email
+                  value: "tripletreemahiliou.info@vasia.com"
+              - column:
+                  name: check_in
+                  value: "14:00"
+              - column:
+                  name: check_out
+                  value: "12:00"

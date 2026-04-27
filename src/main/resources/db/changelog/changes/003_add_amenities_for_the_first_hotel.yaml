@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003
+      author: Anton_Kaliadau
+      changes:
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column:
+                  name: hotel_id
+                  value: '1'
+              - column:
+                  name: amenities
+                  value: "Free WiFi"
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column:
+                  name: hotel_id
+                  value: '1'
+              - column:
+                  name: amenities
+                  value: "Swimming Pool"
+        - insert:
+            tableName: hotel_amenities
+            columns:
+              - column:
+                  name: hotel_id
+                  value: '1'
+              - column:
+                  name: amenities
+                  value: "Fitness Center"
