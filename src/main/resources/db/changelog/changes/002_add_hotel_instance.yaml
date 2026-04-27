@@ -28,7 +28,7 @@ databaseChangeLog:
                   name: country
                   value: "Belarus"
               - column:
-                  name: postal_code
+                  name: post_code
                   value: "220004"
               - column:
                   name: phone

@@ -20,7 +20,7 @@ public interface HotelMapper {
                 address.getHouseNumber(),
                 address.getStreet(),
                 address.getCity(),
-                address.getPostalCode(),
+                address.getPostCode(),
                 address.getCountry());
     }
 }
