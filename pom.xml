@@ -6,7 +6,6 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.5.14</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>anton.kaliadau.gp.test</groupId>
 	<artifactId>hotels</artifactId>
@@ -93,19 +92,16 @@
 				<version>3.11.0</version>
 				<configuration>
 					<annotationProcessorPaths>
-						<!-- 1. Lombok first -->
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 							<version>${lombok.version}</version>
 						</path>
-						<!-- 2. Binding between Lombok and MapStruct -->
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok-mapstruct-binding</artifactId>
 							<version>0.2.0</version>
 						</path>
-						<!-- 3. MapStruct Processor -->
 						<path>
 							<groupId>org.mapstruct</groupId>
 							<artifactId>mapstruct-processor</artifactId>
